@@ -110,16 +110,6 @@ python app.py
 
 3. Access the application at `http://localhost:5000`
 
-## Deployment
-This application is configured for deployment on Render.com:
-
-1. Create a Render account at https://render.com
-2. Create a new Web Service
-3. Connect your GitHub repository
-4. Configure the following settings:
-   - Build Command: `pip install -r requirements.txt`
-   - Start Command: `gunicorn app:app`
-   - Python Version: 3.9 or higher
 
 ## Environment Variables
 No environment variables are required for this application.
