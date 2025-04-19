@@ -109,4 +109,4 @@ No environment variables are required for this application.
 
 ## Dataset
 
-The model is trained on the Credit Card Fraud Detection dataset from Kaggle. The dataset contains transactions made by credit cards in September 2013 by European cardholders. #
+The model is trained on the Credit Card Fraud Detection dataset from Kaggle. The dataset contains transactions made by credit cards in September 2013 by European cardholders.
