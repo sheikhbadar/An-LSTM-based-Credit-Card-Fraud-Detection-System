@@ -55,15 +55,7 @@ python app.py
 http://localhost:5000
 ```
 
-## Project Structure
-
-credit-card-fraud-detection/
-├── app.py              # Flask web application
-├── model.py            # LSTM model implementation
-├── templates/          # HTML templates
-├── static/             # CSS and JavaScript files
-├── requirements.txt    # Project dependencies
-└── README.md           # Project overview
+<pre> ## 📁 Project Structure ```text credit-card-fraud-detection/ ├── app.py # Flask web application ├── model.py # LSTM model implementation ├── templates/ # HTML templates ├── static/ # CSS and JavaScript files ├── requirements.txt # Project dependencies └── README.md # Project overview ``` </pre>
 
 
 ## Contributing
