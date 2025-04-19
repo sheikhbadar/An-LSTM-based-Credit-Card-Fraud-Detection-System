@@ -2,6 +2,22 @@
 
 A machine learning-based system for detecting fraudulent credit card transactions using LSTM neural networks.
 
+##  UI Screenshot
+
+This is the main fraud detection interface:
+
+![Fraud UI](assets/fraud-ui1.png)
+
+
+
+##  Prediction Result
+
+Here's what the prediction output looks like:
+
+![Prediction Output](assets/fraud-ui2.png)
+
+
+
 ## Features
 
 - Real-time fraud detection
@@ -62,6 +78,7 @@ credit-card-fraud-detection/
 ├── app.py              # Flask web application
 ├── model.py            # LSTM model implementation
 ├── templates/          # HTML templates
+├── assets/             # App Screenshots
 ├── static/             # CSS and JavaScript files
 ├── requirements.txt    # Project dependencies
 └── README.md           # Project overview
