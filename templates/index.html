@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Credit Card Fraud Detection</h1>
+            <p>Enter transaction details to detect potential fraud</p>
+        </header>
+
+        <main>
+            <form id="fraudForm">
+                <div class="form-group">
+                    <label for="amount">Transaction Amount ($):</label>
+                    <input type="number" id="amount" name="amount" step="0.01" required>
+                    <div class="hint">Enter the exact amount of the transaction in dollars</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Transaction Time:</label>
+                    <input type="datetime-local" id="time" name="time" required>
+                    <div class="hint">Select the date and time when the transaction occurred</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Transaction Location:</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., New York, USA" required>
+                    <div class="hint">Enter the city and country where the transaction took place</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="device">Device Used:</label>
+                    <select id="device" name="device" required>
+                        <option value="">Select a device</option>
+                        <option value="mobile">Mobile Phone</option>
+                        <option value="desktop">Desktop Computer</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="tablet">Tablet</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="hint">Select the device used to make the transaction</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="behavior">User Behavior Metrics:</label>
+                    <div class="behavior-metrics">
+                        <div class="metric">
+                            <label for="usual_time">Usual Transaction Time:</label>
+                            <select id="usual_time" name="usual_time" required>
+                                <option value="">Select time period</option>
+                                <option value="morning">Morning (6 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 6 PM)</option>
+                                <option value="evening">Evening (6 PM - 12 AM)</option>
+                                <option value="night">Night (12 AM - 6 AM)</option>
+                            </select>
+                        </div>
+                        <div class="metric">
+                            <label for="usual_location">Usual Transaction Location:</label>
+                            <input type="text" id="usual_location" name="usual_location" placeholder="e.g., New York, USA" required>
+                        </div>
+                        <div class="metric">
+                            <label for="usual_device">Usual Device:</label>
+                            <select id="usual_device" name="usual_device" required>
+                                <option value="">Select a device</option>
+                                <option value="mobile">Mobile Phone</option>
+                                <option value="desktop">Desktop Computer</option>
+                                <option value="laptop">Laptop</option>
+                                <option value="tablet">Tablet</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="hint">Enter your usual transaction patterns for comparison</div>
+                </div>
+
+                <button type="submit" class="submit-btn">Check for Fraud</button>
+            </form>
+
+            <div id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing transaction...</p>
+            </div>
+
+            <div id="result" class="result-container hidden">
+                <h2>Prediction Result</h2>
+                <div class="result-content">
+                    <p class="prediction"></p>
+                    <p class="confidence"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
